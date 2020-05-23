@@ -1,7 +1,6 @@
-echo "# hellonerd" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/shaanz/hellonerd.git
-git push -u origin master
+![Docker Image CI](https://github.com/shaanz/hellonerd/workflows/Docker%20Image%20CI/badge.svg)
 
+
+# Run Instructions
+  - Running gRPC Server : docker run <image> python server.py
+  - Running gRPC Client : docker run <image> python client.py
