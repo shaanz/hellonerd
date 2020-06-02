@@ -1,0 +1,16 @@
+version: '3'
+services:
+    grpc-server:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: python server.py
+
+    grpc-client:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: python client.py ravi grpc-server 50055 --detonate
+        depends_on:
+            - grpc-server
+
